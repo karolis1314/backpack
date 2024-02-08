@@ -1,0 +1,58 @@
+INSERT INTO thing (height, weight, width, length, name, color, fits_to_small_section, material, season)
+VALUES (98.5, 0.5, 12, 200, 'Umbrella-Storm', 'Black', false, 'PLASTIC', 'Spring'),
+       (72.5, 0.3, 9, 150, 'Umbrella-Wind', 'Black', true, 'PLASTIC', 'Autumn'),
+       (55.2, 0.254, 7, 100, 'Umbrella-Light', 'Black', true, 'PLASTIC', 'Summer'),
+       (15.0, 0.1, 3.0, 20, 'Flashlight', 'Black', true, 'PLASTIC', 'All'),
+       (10.0, 0.05, 2.0, 10, 'Lighter', 'Silver', true, 'METAL', 'All'),
+       (180.0, 1.5, 60.0, 200, 'Sleeping-Bag', 'Blue', false, 'NYLON', 'Winter'),
+       (20.0, 0.3, 10.0, 30, 'Water-Bottle', 'Clear', true, 'PLASTIC', 'All'),
+       (15.0, 0.5, 10.0, 25, 'First-Aid-Kit', 'Red', true, 'PLASTIC', 'All'),
+       (150.0, 3.0, 200.0, 150, 'Tent', 'Green', false, 'NYLON', 'Summer'),
+       (5.0, 0.05, 15.0, 10, 'Sunglasses', 'Black', true, 'PLASTIC', 'Summer'),
+       (30.0, 0.2, 10.0, 20, 'Winter-Gloves', 'Black', true, 'CLOTH', 'Winter'),
+       (10.0, 0.1, 10.0, 10, 'Summer-Cap', 'Red', true, 'COTTON', 'Summer'),
+       (15.0, 0.15, 10.0, 15, 'Winter-Hat', 'Blue', true, 'WOOL', 'Winter'),
+       (5.0, 0.3, 5.0, 5, 'Fire-Burner', 'Silver', true, 'METAL', 'All'),
+       (10.0, 0.5, 10.0, 12, 'Pot', 'Silver', false, 'METAL', 'All');
+
+INSERT INTO thing_attributes (thing_id, attribute)
+VALUES ((SELECT id FROM thing WHERE name = 'Umbrella-Storm'), 'sports'),
+       ((SELECT id FROM thing WHERE name = 'Umbrella-Wind'), 'regular'),
+       ((SELECT id FROM thing WHERE name = 'Umbrella-Light'), 'light'),
+       ((SELECT id FROM thing WHERE name = 'Flashlight'), 'portable'),
+       ((SELECT id FROM thing WHERE name = 'Lighter'), 'fire'),
+       ((SELECT id FROM thing WHERE name = 'Sleeping-Bag'), 'warm'),
+       ((SELECT id FROM thing WHERE name = 'Sleeping-Bag'), 'lightweight'),
+       ((SELECT id FROM thing WHERE name = 'Water-Bottle'), 'hydration'),
+       ((SELECT id FROM thing WHERE name = 'Water-Bottle'), 'portable'),
+       ((SELECT id FROM thing WHERE name = 'First-Aid-Kit'), 'emergency'),
+       ((SELECT id FROM thing WHERE name = 'First-Aid-Kit'), 'medical'),
+       ((SELECT id FROM thing WHERE name = 'Tent'), 'shelter'),
+       ((SELECT id FROM thing WHERE name = 'Tent'), 'sleeping'),
+       ((SELECT id FROM thing WHERE name = 'Tent'), 'large'),
+       ((SELECT id FROM thing WHERE name = 'Sunglasses'), 'UV Protection'),
+       ((SELECT id FROM thing WHERE name = 'Sunglasses'), 'Polarized'),
+       ((SELECT id FROM thing WHERE name = 'Winter-Gloves'), 'Insulated'),
+       ((SELECT id FROM thing WHERE name = 'Winter-Gloves'), 'Waterproof'),
+       ((SELECT id FROM thing WHERE name = 'Summer-Cap'), 'Breathable'),
+       ((SELECT id FROM thing WHERE name = 'Summer-Cap'), 'Sun Protection'),
+       ((SELECT id FROM thing WHERE name = 'Winter-Hat'), 'Insulated'),
+       ((SELECT id FROM thing WHERE name = 'Winter-Hat'), 'Ear Flaps'),
+       ((SELECT id FROM thing WHERE name = 'Fire-Burner'), 'Portable'),
+       ((SELECT id FROM thing WHERE name = 'Fire-Burner'), 'Fuel Efficient'),
+       ((SELECT id FROM thing WHERE name = 'Pot'), 'Heat Resistant'),
+       ((SELECT id FROM thing WHERE name = 'Pot'), 'Non-stick');
+
+INSERT INTO food (height, weight, width, length, name, calories, flavour, liquid)
+VALUES (10.0, 0.1, 5.0, 10, 'Granola Bar', 200, 'SWEET', false),
+       (8.0, 0.2, 6.0, 8, 'Trail Mix', 250, 'SALTY', false),
+       (15.0, 0.3, 8.0, 15, 'Instant Noodles', 350, 'SAVORY', true),
+       (12.0, 0.15, 6.0, 12, 'Energy Bar', 250, 'SWEET', false),
+       (10.0, 0.2, 4.0, 10, 'Beef Jerky', 150, 'SALTY', false),
+       (8.0, 0.1, 3.0, 8, 'Dried Fruit', 180, 'SWEET', false),
+       (15.0, 0.4, 5.0, 15, 'Peanut Butter', 200, 'NUTTY', false),
+       (12.0, 0.5, 8.0, 12, 'Canned Soup', 300, 'SAVORY', true),
+       (12.0, 0.2, 6.0, 12, 'Protein Bar', 220, 'SWEET', false),
+       (10.0, 0.1, 5.0, 10, 'Instant Coffee', 0, 'BITTER', true);
+
+
